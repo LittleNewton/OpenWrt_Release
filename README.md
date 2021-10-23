@@ -1,8 +1,8 @@
-# **OpenWRT x86** Release
+# **OpenWrt 21.02 x86** 固件 Release
 
 ## 1. 说明
 
-依据官方 OpenWRT 代码库编译，添加了若干官方库不提供但经常需要用到的插件。
+依据官方 OpenWrt 21.02 代码库编译，添加了若干官方库不提供但经常需要用到的插件。
 
 镜像的 Google Drive [下载地址](https://drive.google.com/drive/folders/1oNbIwviHju9gB-u7NLPs1-FcKSOJJzjE?usp=sharing)。
 
@@ -22,7 +22,21 @@
 
 ## 3. 官方之外的插件
 
-### 3.1 Passwall
+### 3.1 Open Clash
+
+``` txt
+// OpenClash 官方 GitHub 仓库链接：
+
+https://github.com/vernesong/OpenClash
+```
+
+OpenClash 是一个强大的运行于 OpenWrt 系统的流量代理工具，支持非常不错的分流功能。配置项比较于 Passwall 要更为复杂，但是功能更好，广受高级用户们的喜欢。
+
+> **Note**: 本套编译发行的 OpenClash 经过严格的测试，保证可以与 OpenWrt 21.02 系统完美匹配。**注意，如果你有 IPv6 的需求，请务必在 OpenClash 的配置页面里打开 IPv6 DNS 解析功能。** 如下图所示。
+
+![Enable the IPv6 DNS of OpenClash settings](img/enable_IPv6_DNS_OpenClash.png)
+
+### 3.2 Passwall
 
 **这是一个代理、分流工具。**
 
@@ -47,7 +61,7 @@ CONFIG_PACKAGE_luci-i18n-passwall-zh-cn=y
 
 ![How-to-install-trojan-go-manually](img/trojan-Go.jpg)
 
-### 3.2 尚未集成的第三方插件 TO-DO
+### 3.3 尚未集成的第三方插件 TO-DO
 
 - 阿里云、腾讯云 DDNS：目前官方的 DDNS 插件不支持这两家 DDNS 服务商，因此需要修改官方 ddns 插件。
 - Open-Clash
@@ -58,4 +72,4 @@ CONFIG_PACKAGE_luci-i18n-passwall-zh-cn=y
 
 ## Reference
 
-官方库链接：github.com/openwrt/openwrt
+OpenWrt 官方库链接：github.com/openwrt/openwrt
