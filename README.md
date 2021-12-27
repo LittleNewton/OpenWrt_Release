@@ -15,7 +15,7 @@
 参见 `build-info` 文件夹。
 
 - 支持 Mellanox 最新版网卡，`mellanox-core-4` 和 `mellanox-core-5` 驱动都已经集成。支持 HPE 544+FLR 等网卡
-- MWAN3
+- MWAN3 (普通用户建议关闭，有可能与 OpenClash TUN 模式冲突)
 - QoS
 - TTYD Terminal 网页版终端
 - netdata: 在浏览器地址栏输入 your-ip-addr:19999 可打开 netdata 实时监控的 web 界面
@@ -63,8 +63,7 @@ CONFIG_PACKAGE_luci-i18n-passwall-zh-cn=y
 
 ### 3.3 尚未集成的第三方插件 TO-DO
 
-- 阿里云、腾讯云 DDNS：目前官方的 DDNS 插件不支持这两家 DDNS 服务商，因此需要修改官方 ddns 插件。
-- Open-Clash
+- 阿里云：目前官方的 DDNS 插件不支持阿里云 DDNS，因此需要修改官方 ddns 插件。
 
 ## 4. 免责声明
 
