@@ -6,6 +6,8 @@
 
 镜像的 Google Drive [下载地址](https://drive.google.com/drive/folders/1oNbIwviHju9gB-u7NLPs1-FcKSOJJzjE?usp=sharing)。
 
+> **Google Drive 仓库提供 VMKD、VHDX 等虚拟机磁盘文件，适合使用 VMware vSphere 或 Hyper-V 的虚拟机用户。**
+
 本库仅为提供二进制镜像，因此除介绍文件，不提供任何源代码。因为并没有对源代码进行任何修改。
 
 版本更新信息，请使用 Git Diff 工具查看 build-info 文件夹中的文件更新历史。
