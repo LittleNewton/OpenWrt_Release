@@ -65,7 +65,9 @@ CONFIG_PACKAGE_luci-i18n-passwall-zh-cn=y
 
 ### 3.3 尚未集成的第三方插件 TO-DO
 
-- 阿里云：目前官方的 DDNS 插件不支持阿里云 DDNS，因此需要修改官方 ddns 插件。
+- 阿里云 DDNS 脚本：目前官方的 DDNS 插件不支持阿里云 DDNS，因此需要修改官方 ddns 插件。
+
+> Note: 但是支持 dnspod.cn 腾讯云的 DDNS，经过测试比较稳定。
 
 ## 4. 免责声明
 
