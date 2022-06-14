@@ -2,7 +2,7 @@
 
 ## 1. 说明
 
-依据官方 OpenWrt 21.02 代码库编译，添加了若干官方库不提供但经常需要用到的插件。
+依据官方 OpenWrt 22.03 代码库编译，添加了若干官方库不提供但经常需要用到的插件。
 
 镜像的 Google Drive [下载地址](https://drive.google.com/drive/folders/1oNbIwviHju9gB-u7NLPs1-FcKSOJJzjE?usp=sharing)。
 
@@ -17,14 +17,16 @@
 参见 `build-info` 文件夹。
 
 - 支持 Mellanox 最新版网卡，`mellanox-core-4` 和 `mellanox-core-5` 驱动都已经集成。支持 HPE 544+FLR 等网卡
-- MWAN3 (普通用户建议关闭，有可能与 OpenClash TUN 模式冲突)
+- MWAN3 (**普通用户建议关闭**，有可能与 OpenClash TUN 模式冲突)
+- WireGuard VPN 及相关 luci 组件，支持以 WireGuard 技术建立 VPN 隧道
 - QoS
 - TTYD Terminal 网页版终端
 - netdata: 在浏览器地址栏输入 your-ip-addr:19999 可打开 netdata 实时监控的 web 界面
+- AdGuardHome DNS 与 广告拦截，由于 AdGuard 与 dnsmasq 共享同一个 53 端口，因此需要手动设置 dnsmasq 的 `port` 字段，可将其设置为 `5353` 之后再开启 AdGuardHome 服务。AdGuardHome 的配置入口是 `http://<Your-Router-IP>:3000`
 
-## 3. 官方之外的插件
+## 3. 官方之外的代理插件
 
-### 3.1 Open Clash
+### 3.1 OpenClash
 
 ``` txt
 // OpenClash 官方 GitHub 仓库链接：
@@ -38,7 +40,7 @@ OpenClash 是一个强大的运行于 OpenWrt 系统的流量代理工具，支�
 
 ![Enable the IPv6 DNS of OpenClash settings](img/enable_IPv6_DNS_OpenClash.png)
 
-### 3.2 Passwall
+### 3.2 Passwall (功能较弱)
 
 **这是一个代理、分流工具。**
 
@@ -67,7 +69,7 @@ CONFIG_PACKAGE_luci-i18n-passwall-zh-cn=y
 
 - 阿里云 DDNS 脚本：目前官方的 DDNS 插件不支持阿里云 DDNS，因此需要修改官方 ddns 插件。
 
-> Note: 但是支持 dnspod.cn 腾讯云的 DDNS，经过测试比较稳定。
+> Note: 但是支持 `dnspod.cn` 腾讯云的 DDNS，经过测试比较稳定。
 
 ## 4. 免责声明
 
