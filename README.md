@@ -36,7 +36,7 @@ https://github.com/vernesong/OpenClash
 
 OpenClash 是一个强大的运行于 OpenWrt 系统的流量代理工具，支持非常不错的分流功能。配置项比较于 Passwall 要更为复杂，但是功能更好，广受高级用户们的喜欢。
 
-> **Note**: 本套编译发行的 OpenClash 经过严格的测试，保证可以与 OpenWrt 21.02 系统完美匹配。**注意，如果你有 IPv6 的需求，请务必在 OpenClash 的配置页面里打开 IPv6 DNS 解析功能。** 如下图所示。
+> **Note**: 本套编译发行的 OpenClash 经过严格的测试，保证可以与 OpenWrt 22.03 系统完美匹配。**注意，如果你有 IPv6 的需求，请务必在 OpenClash 的配置页面里打开 IPv6 DNS 解析功能。** 如下图所示。
 
 ![Enable the IPv6 DNS of OpenClash settings](img/enable_IPv6_DNS_OpenClash.png)
 
@@ -61,7 +61,7 @@ CONFIG_PACKAGE_luci-app-passwall_INCLUDE_Shadowsocks_Rust_Client=y
 CONFIG_PACKAGE_luci-i18n-passwall-zh-cn=y
 ```
 
-> **Note**: 因为 Trojan-Go 的编译比较复杂，而且官方库的 Golang 版本和 Trojan-Go 的版本要求有点区别，因此并未集成 Trojan-Go，若实在有需要，**可点击手动更新按钮，Passwall 会自动下载最新版 Trojan-Go 并自动安装。** 如下图所示 Manually update.
+> **Note**: 因为 Trojan-Go 的编译比较复杂，而且官方库的 Golang 版本和 Trojan-Go 的版本要求略有区别，因此并未集成 Trojan-Go，若实有需要，**可点击手动更新按钮，Passwall 会自动下载最新版 Trojan-Go 并自动安装。** 如下图所示 `Manually update`.
 
 ![How-to-install-trojan-go-manually](img/trojan-Go.jpg)
 
@@ -77,4 +77,4 @@ CONFIG_PACKAGE_luci-i18n-passwall-zh-cn=y
 
 ## Reference
 
-OpenWrt 官方库链接：github.com/openwrt/openwrt
+OpenWrt 官方库链接：<https://github.com/openwrt/openwrt>
