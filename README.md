@@ -1,4 +1,4 @@
-# **OpenWrt 21.02 x86** 固件 Release
+# **OpenWrt 22.03 x86_64** 固件 Release
 
 ## 1. 说明
 
@@ -18,8 +18,9 @@
 
 - 支持 Mellanox 最新版网卡，`mellanox-core-4` 和 `mellanox-core-5` 驱动都已经集成。支持 HPE 544+FLR 等网卡
 - MWAN3 (**普通用户建议关闭**，有可能与 OpenClash TUN 模式冲突)
-- WireGuard VPN 及相关 luci 组件，支持以 WireGuard 技术建立 VPN 隧道
+- WireGuard VPN 及相关 luci 组件，支持以 WireGuard 技术建立 VPN 隧道。
 - QoS
+- ebtables
 - TTYD Terminal 网页版终端
 - netdata: 在浏览器地址栏输入 your-ip-addr:19999 可打开 netdata 实时监控的 web 界面
 - AdGuardHome DNS 与 广告拦截，由于 AdGuard 与 dnsmasq 共享同一个 53 端口，因此需要手动设置 dnsmasq 的 `port` 字段，可将其设置为 `5353` 之后再开启 AdGuardHome 服务。AdGuardHome 的配置入口是 `http://<Your-Router-IP>:3000`
